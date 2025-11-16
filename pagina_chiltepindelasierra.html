@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiltepín de la Sierra Norte</title>
+  <style>
+    /* PALETA: rojo seco – dorado – negro */
+    :root {
+      --rojo: #7a1c12;
+      --rojo-oscuro: #4a0f0a;
+      --dorado: #c9a44b;
+      --negro: #111;
+      --gris: #eee;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background: var(--gris);
+      color: var(--negro);
+    }
+
+    /* HERO PARALLAX */
+    .hero {
+      height: 90vh;
+      background-image: url('https://chiltepinelpayin.com.mx/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-30-at-11.16.41.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.7);
+      font-size: 3rem;
+      padding: 0 20px;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--negro);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: var(--dorado);
+      margin: 0 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* SECCIONES */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1s forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      color: var(--rojo);
+      border-left: 8px solid var(--dorado);
+      padding-left: 15px;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .section-img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px 0 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    /* SLIDER PROFESIONAL */
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: sliderFade 18s infinite;
+    }
+
+    .slide:nth-child(1) { animation-delay: 0s; }
+    .slide:nth-child(2) { animation-delay: 6s; }
+    .slide:nth-child(3) { animation-delay: 12s; }
+
+    @keyframes sliderFade {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    /* CATÁLOGO */
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .producto {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: scale(1.06);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
+      padding: 18px 22px;
+      border-radius: 50%;
+      font-size: 26px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+    }
+
+    footer {
+      background: var(--negro);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="hero">Chiltepín de la Sierra Norte</div>
+
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#galeria">Galería</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <img class="section-img" src="https://i0.wp.com/agronoticias.com.mx/wp-content/uploads/2019/07/chiltepine1.jpg" />
+    <p>Somos una cooperativa dedicada a la producción sustentable y comercio justo del chiltepín, un fruto ancestral de gran valor biocultural. Trabajamos con productores de Amixtlán, Puebla, aplicando técnicas agroecológicas y procesos artesanales.</p>
+  </section>
+
+  <section id="catalogo">
+    <h2>Catálogo de Productos</h2>
+    <div class="slider">
+      <div class="slide" style="background-image:url('https://www.muydelish.com/wp-content/uploads/2023/02/salsa-chiltepin-ingredients.jpg')"></div>
+      <div class="slide" style="background-image:url('https://i.ytimg.com/vi/fEJupyQulJY/hq720.jpg')"></div>
+      <div class="slide" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTovEeKpAt_EIKVBAey7_woaFFO5-3nefhHMg&s')"></div>
+    </div>
+
+    <div class="catalogo">
+      <div class="producto">
+        <img src="https://www.chilesmexicol.com.co/wp-content/uploads/2024/07/9-CHLE-CHILTEPIN-SECO-MEXICANO.jpg" />
+        <h3>Chiltepín Seco</h3>
+        <p>Seleccionado y deshidratado artesanalmente.</p>
+      </div>
+
+      <div class="producto">
+        <img src="https://lh7-us.googleusercontent.com/bgM3vS62u86EFJyHTWQZ1i-AX2IoWFMYJ8S-duym1Tpb26Vcg4Dx7AJM63kOKxDyMUg7p65GSoTIC1cPJtEloZdy-9JuLF3ulMOWdBb7hvfboiBxZrcX5njUPvaqC0FoyyWd1eH__k25Ptmp9RRroi" />
+        <h3>Chiltepín Molido</h3>
+        <p>Polvo fino ideal para salsas y cocina gourmet.</p>
+      </div>
+
+      <div class="producto">
+        <img src="https://www.cocinavital.mx/wp-content/uploads/2023/05/salsa-macha-de-chile-chiltepin.jpg" />
+        <h3>Salsa Artesanal</h3>
+        <p>Preparada con recetas tradicionales.</p>
+      </div>
+
+      <div class="producto">
+        <img src="https://img-global.cpcdn.com/recipes/f9e5a6c63b318180/680x781cq80/salsa-de-chile-de-arbol-y-chiltepin-foto-principal.jpg" />
+        <h3>Pasta de Chiltepín</h3>
+        <p>Concentrado picante para uso profesional.</p
+
+<!-- Continuación arreglando etiqueta cerrada -->
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso">
+    <h2>Proceso Artesanal</h2>
+    <img class="section-img" src="https://oem.com.mx/elsoldehermosillo/img/19043967/1678443891/BASE_LANDSCAPE/1200/image.webp" />
+    <p>Nuestro proceso inicia con recolección manual, seguido de secado al sol, selección, molienda y envasado con estándares artesanales.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="slider">
+      <div class="slide" style="background-image:url('https://i.ytimg.com/vi/eh3kxVDCIhQ/hq720.jpg')"></div>
+      <div class="slide" style="background-image:url('https://www.cocinavital.mx/wp-content/uploads/2023/05/salsa-macha-de-chile-chiltepin.jpg')"></div>
+      <div class="slide" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8KJcLpod5JJqSWO8jvMfmZBVeAwiIl_4hGw&s')"></div>
+    </div>
+  </section>
+
+  <section id="ubicacion">
+    <h2>Ubicación</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.397!2d-97.79!3d20.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDAzJzA2LjUiTiA5N8KwNDcnMzYuMCJX!5e0!3m2!1ses!2smx!4v000000" width="100%" height="350" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto y Pedidos</h2>
+    <p><strong>Teléfono y WhatsApp:</strong> +52 7971259059</p>
+    <p><strong>Email:</strong> chiltepindelaserranorte@gmail.com</p>
+    <p><strong>Facebook:</strong> Chiltepín de la Sierra Norte</p>
+  </section>
+
+  <a class="whatsapp-btn" href="https://wa.me/527971259059">💬</a>
+
+  <footer>
+    &copy; 2025 Chiltepín de la Sierra Norte. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
